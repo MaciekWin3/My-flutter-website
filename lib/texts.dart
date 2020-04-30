@@ -1,0 +1,1 @@
+String aboutMe = "Hi, my name is Maciej and I am from Gdynia. Im studing CS in Univesity of Gdańsk";

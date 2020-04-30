@@ -3,14 +3,7 @@ import 'package:my_flutter_website/texts.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('My Flutter Website'),
-      ),
-      body: Container(
+const Container = Container(
         width: 290.0,
         color: Colors.grey[200],
         padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
@@ -103,12 +96,12 @@ class Home extends StatelessWidget {
                 InkWell(
                   child: Text(
                     'https://github.com/MaciekWin3',
-                  style: TextStyle(
-                    color: Colors.grey[700],
+                    style: TextStyle(
+                    color: Colors.blue[700],
                     fontSize: 14.0,
                     letterSpacing: 1.0,
+                    ),
                   ),
-                ),
                   onTap: () async {
                     if (await canLaunch("https://github.com/MaciekWin3")) {
                       await launch("https://github.com/MaciekWin3");
@@ -120,6 +113,3 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
