@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_website/backend/quote.dart';
 import 'package:my_flutter_website/texts.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:my_flutter_website/backend/crypto.dart';
+
 
 class Home extends StatelessWidget {
   @override
@@ -9,6 +12,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Flutter Website'),
+        elevation: 0,
       ),
       body: Container(
         width: 290.0,
@@ -22,7 +26,7 @@ class Home extends StatelessWidget {
             radius: 65.0,
           ),
            Divider(              
-              height: 32.0,
+              height: 30.0,
             ),
           Text(
             "About me",
@@ -34,10 +38,14 @@ class Home extends StatelessWidget {
               ),
             ),
           Divider(              
-              height: 32.0,
+              height: 30.0,
             ),
           Text(
-            aboutMe,                                     
+            aboutMe,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              
+              ),
             ),
           Divider(              
             height: 30.0,
@@ -54,7 +62,27 @@ class Home extends StatelessWidget {
           Divider(              
             height: 30.0,
           ),
-          Row(
+            Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.phone_android,                  
+                ),
+                SizedBox(width: 15.0),
+                Text(
+                  '+48 697220404',
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                    fontSize: 14.0,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),  
+            Row(
             crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Icon(
@@ -78,33 +106,13 @@ class Home extends StatelessWidget {
             Row(
             crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(
-                  Icons.phone_android,                  
-                ),
-                SizedBox(width: 15.0),
-                Text(
-                  '+48 697220404',
-                  style: TextStyle(
-                    color: Colors.grey[700],
-                    fontSize: 14.0,
-                    letterSpacing: 1.0,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
                 Icon(AntDesign.github),
                 SizedBox(width: 15.0),
                 InkWell(
                   child: Text(
                     'https://github.com/MaciekWin3',
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.blue[700],
                     fontSize: 14.0,
                     letterSpacing: 1.0,
                   ),
@@ -117,6 +125,23 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
+            Divider(              
+              height: 30.0,
+              
+            ),
+            Text(
+            "Cryptocurrency \n exchange rate",
+            style: TextStyle(
+              color: Colors.blue[500],
+              fontWeight: FontWeight.bold,
+              fontSize: 27.0,
+              letterSpacing: 2.0,              
+              ),
+            ),
+            Divider(              
+              height: 32.0,             
+            ),
+            Text(priceBtc),
           ],
         ),
       ),
