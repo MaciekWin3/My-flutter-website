@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_website/screens/home.dart';
-import 'package:my_flutter_website/screens/loading.dart';
+
 
 
 void main() {

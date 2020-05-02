@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
-final upBar = AppBar(        
+
+
+Widget upBar = AppBar(        
         title: Text('My Flutter Website'),
         elevation: 0,
         backgroundColor: Colors.lightBlue,
@@ -16,7 +19,7 @@ final upBar = AppBar(
               style: TextStyle(
                 fontSize: 15.0,
               ),
-            ),                        
+            ),
           ],
-        
-);
+      
+    );

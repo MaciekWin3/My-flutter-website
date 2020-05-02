@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 import 'package:random_string/random_string.dart';
 
 int whichQuote = randomBetween(1,2);

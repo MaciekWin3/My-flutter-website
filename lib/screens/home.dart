@@ -4,8 +4,14 @@ import 'package:my_flutter_website/texts.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:my_flutter_website/backend/crypto.dart';
-import 'package:my_flutter_website/widgets/leftPanel.dart';
-import 'package:my_flutter_website/widgets/upBar.dart';
+import 'package:my_flutter_website/widgets/leftPanel/leftPanel.dart';
+import 'package:my_flutter_website/widgets/upBar/upBar.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:my_flutter_website/widgets/containers/Container_1.dart';
+import 'package:my_flutter_website/widgets/containers/Container_2.dart';
+import 'package:my_flutter_website/widgets/containers/Container_3.dart';
+import 'package:my_flutter_website/widgets/containers/Container_4.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -36,67 +42,30 @@ class _HomeState extends State<Home> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: upBar,   // <= góny panel
+      appBar: upBar,   // <= górny panel
       body: Row(          
           children: <Widget>[
           leftPanel, // <= cały leftPanel 
           Container( //przerwa
-            width: 50.0, 
+            width: 40.0, 
             color: Colors.yellow[50],            
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Container(
-                width: 500,
-                height: 300,
-                padding: EdgeInsets.all(5),
-                color: Colors.lightBlue,
-                child: Row(                  
-                  children: [                    
-                    CircleAvatar(
-                    backgroundImage: AssetImage('flutter2.png'),
-                    radius: 65.0,
-                    ),
-                  ],                  
-                ),
-              ),
-              Container(
-                width: 500,
-                height: 300,
-                padding: EdgeInsets.all(5),
-                color: Colors.lightBlue,
-                child: Row(                  
-                  children: [                    
-                    CircleAvatar(
-                    backgroundImage: AssetImage('c.png'),
-                    backgroundColor: Colors.white,
-                    radius: 65.0,
-                    ),
-                  ],                  
-                ),
-              ),
+              container_1,
+              container_2,
             ],
           ),
           Container( 
-            width: 50.0, 
+            width: 40.0, 
             color: Colors.yellow[50],            
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Container(
-                width: 500,
-                height: 300,
-                padding: EdgeInsets.all(50),
-                color: Colors.lightBlue,
-              ),
-              Container(
-                width: 500,
-                height: 300,
-                padding: EdgeInsets.all(50),
-                color: Colors.lightBlue,
-              ),
+              container_3,
+              container_4,
             ],
           ),
         ],
