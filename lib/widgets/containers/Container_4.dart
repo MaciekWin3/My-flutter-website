@@ -7,7 +7,7 @@ Widget container_4 = Container(
                 width: 560,
                 height: 320,
                 decoration: ShapeDecoration(
-                  color: Colors.lightBlue,
+                  color: Colors.blue[800],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
