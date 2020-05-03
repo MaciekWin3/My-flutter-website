@@ -25,7 +25,7 @@ Widget container_3 = Container(
                     SizedBox(
                         height: 10,
                       ),
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[                      
                       Text(
@@ -40,6 +40,14 @@ Widget container_3 = Container(
                       ),
                       SizedBox(
                         height: 10,
+                      ),
+                      Text(
+                        technologies,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                                        
+                        ),
                       ),
                     ],)
                   ],                  

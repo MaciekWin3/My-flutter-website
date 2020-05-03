@@ -22,7 +22,7 @@ Widget container_1 = Container(
                     radius: 50.0,
                     ),
                     SizedBox(
-                        height: 12,
+                        height: 10,
                       ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -38,14 +38,13 @@ Widget container_1 = Container(
                         ),
                       ),
                       SizedBox(
-                        height: 12,
+                        height: 10,
                       ),
                       Text(
                         story,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white,
-                                        
+                          color: Colors.white,                                        
                         ),
                       ),
                     ],

@@ -1,14 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_website/backend/eth.dart';
 import 'package:my_flutter_website/backend/quote.dart';
 import 'package:my_flutter_website/texts.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:my_flutter_website/backend/crypto.dart';
+import 'package:my_flutter_website/backend/btc.dart';
+import 'package:my_flutter_website/backend/eth.dart';
+
+class LeftPanel extends StatefulWidget {
+  @override
+  _LeftPanelState createState() => _LeftPanelState();
+}
+
+class _LeftPanelState extends State<LeftPanel> {
+  Future<Album> futureAlbum;
+  Future<AlbumEth> futureAlbum2;
+
+  @override
+   void initState() {
+    super.initState();
+    futureAlbum = fetchAlbum();
+    futureAlbum2 = fetchAlbum2();
+  }
 
 
 
-final leftPanel = Container( //boczny pasek
-            width: 290.0, //szerokość bocznego paska
+  Widget build(BuildContext context) {
+    
+    return Container(     
+      width: 290.0, //szerokość bocznego paska
             color: Colors.grey[200],
             padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
             child: Column(
@@ -134,8 +154,51 @@ final leftPanel = Container( //boczny pasek
                 Divider(              
                   height: 32.0,             
                 ),
-                //Text(price),
+                Row(
+                  children: <Widget>[
+                    Icon(
+                      Ionicons.logo_bitcoin,
+                      size: 48.0,
+                      ),
+                    FutureBuilder<Album>(
+                      future: futureAlbum,
+                      builder: (context, snapshot) {
+                        if (snapshot.hasData) {
+                          return Text(snapshot.data.high.substring(0,7));
+                        } else if (snapshot.hasError) {
+                          return Text("${snapshot.error}");
+                        }
+                        // By default, show a loading spinner.
+                        return CircularProgressIndicator();
+                      },
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.grey[200],
+                      backgroundImage: AssetImage('eth.png'),
+                      radius: 22.0,
+                    ),
+                    FutureBuilder<AlbumEth>(
+                      future: futureAlbum2,
+                      builder: (context, snapshot) {
+                        if (snapshot.hasData) {
+                          return Text(snapshot.data.high);
+                        } else if (snapshot.hasError) {
+                          return Text("Error!");
+                        }
+                        // By default, show a loading spinner.
+                        return CircularProgressIndicator();
+                      },
+                    ),
+                  ],
+                ),
+                
               ],
             ),
-          );
-        
+    );
+  }
+}
+
+

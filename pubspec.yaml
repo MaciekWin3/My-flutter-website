@@ -28,6 +28,7 @@ dependencies:
   random_string: ^2.0.1
   http: ^0.12.1
   responsive_builder: ^0.1.5
+  crypto_font_icons: 0.1.0
 
 
 dev_dependencies:

@@ -21,5 +21,4 @@ Widget upBar = AppBar(
               ),
             ),
           ],
-      
     );
