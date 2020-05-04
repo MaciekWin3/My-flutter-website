@@ -3,8 +3,8 @@ import 'package:my_flutter_website/texts.dart';
 
 
 Widget container_1 = Container(
-                width: 560,
-                height: 320,
+                // width: 560,
+                // height: 320,
                 decoration: ShapeDecoration(
                   color: Colors.blue[800],
                   shape: RoundedRectangleBorder(

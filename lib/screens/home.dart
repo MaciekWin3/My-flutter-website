@@ -25,27 +25,49 @@ class _HomeState extends State<Home> {
       body: Row(          
           children: <Widget>[
           LeftPanel(), // <= cały leftPanel 
-          Container( //przerwa
-            width: 40.0, 
-            color: Colors.yellow[50],            
+          Expanded(
+            flex: 1,
+              child: Container(              
+              color: Colors.yellow[50],            
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              container_1,
-              container_2,
-            ],
+          Expanded(
+            flex: 6,
+              child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Expanded(child: SizedBox(), flex : 1),
+                Expanded(child: container_1, flex: 9),
+                Expanded(child: SizedBox(), flex: 1),
+                Expanded(child: container_2, flex: 9),
+                Expanded(child: SizedBox(), flex: 1),
+              ],
+            ),
           ),
-          Container( 
-            width: 40.0, 
-            color: Colors.yellow[50],            
+          Expanded(
+            flex: 1,
+              child: Container(              
+              color: Colors.yellow[50],            
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              container_3,
-              container_4,
-            ],
+          Expanded(
+            flex: 6,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Expanded(child: SizedBox(), flex : 1),
+                Expanded(child: container_3, flex: 9),
+                Expanded(child: SizedBox(), flex: 1),
+                Expanded(child: container_4, flex: 9),
+                Expanded(child: SizedBox(), flex: 1),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 1,
+              child: Container(              
+              color: Colors.yellow[50],            
+            ),
           ),
         ],
       ),
