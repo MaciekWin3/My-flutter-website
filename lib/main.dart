@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_website/screens/home.dart';
-import 'package:my_flutter_website/widgets/mobile.dart';
-import 'package:my_flutter_website/backend/screen_sizes.dart';
-import 'package:my_flutter_website/screens/responsive_widget.dart';
+
 
 
 

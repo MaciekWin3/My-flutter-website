@@ -25,10 +25,11 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
 
 
 
-  Widget build(BuildContext context) {
-    Future<Album> futureAlbum;
+  Widget build(BuildContext context) {  
     return Scaffold(
-      body: Column(children: <Widget>[
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[       
         Expanded(
               child: Container(       
               color: Colors.grey[200],
@@ -58,8 +59,7 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                 Text(
                   aboutMe,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    
+                  style: TextStyle(                   
                     ),
                   ),
                 Divider(              
@@ -78,8 +78,9 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                   height: 30.0,
                 ),
                   Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                    
                     children: <Widget>[
+                      
                       Icon(
                         Icons.phone_android,                  
                       ),
@@ -98,7 +99,7 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                     height: 5,
                   ),  
                   Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                    
                     children: <Widget>[
                       Icon(
                         Icons.email,
@@ -119,7 +120,8 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                     height: 5,
                   ),
                   Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                    
+                  
                     children: <Widget>[
                       Icon(AntDesign.github),
                       SizedBox(width: 15.0),
@@ -140,57 +142,6 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                       ),
                     ],
                   ),
-                  Divider(              
-                    height: 30.0,
-                    color: Colors.grey[350],
-                  ),
-                  Text(
-                  "      Bitcoin \n exchange rate",
-                  style: TextStyle(
-                    color: Colors.blue[500],
-                    fontWeight: FontWeight.bold,
-                    fontSize: 27.0,
-                    letterSpacing: 2.0,              
-                    ),
-                  ),
-                  Divider(              
-                    height: 32.0,             
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        Ionicons.logo_bitcoin,
-                        size: 48.0,
-                        ),
-                      FutureBuilder<Album>(
-                        future: futureAlbum,
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            if(snapshot.data.high[0] == '1' ){
-                              return Text(snapshot.data.high.substring(0,8));
-                            }
-                            else{
-                              return Text(snapshot.data.high.substring(0,7));
-                            }                         
-                          } else if (snapshot.hasError) {
-                            return Text("${snapshot.error}");
-                          }
-                          // By default, show a loading spinner.
-                          return CircularProgressIndicator();
-                        },
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      CircleAvatar(
-                        backgroundColor: Colors.grey[200],
-                        backgroundImage: AssetImage('eth.png'),
-                        radius: 22.0,
-                      ),
-                      Text('Soon'),
-                    ],
-                  ),
-                  
                 ],
               ),
           ),

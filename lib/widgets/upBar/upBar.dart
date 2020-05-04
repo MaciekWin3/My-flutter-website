@@ -14,11 +14,14 @@ Widget upBar = AppBar(
                   AntDesign.chrome
                   )
                 ),
-              Text('\n   For best experience use Google Chrome  ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15.0,
-              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(5, 8, 2, 1),
+                              child: Text('For best experience use Google Chrome  ',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 15.0,
+                ),
             ),
+              ),
           ],
     );
