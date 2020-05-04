@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Expanded(
-            flex: 6,
+            flex: 8,
               child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Expanded(
-            flex: 6,
+            flex: 8,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[

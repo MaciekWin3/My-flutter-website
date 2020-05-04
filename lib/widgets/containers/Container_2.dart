@@ -4,8 +4,8 @@ import 'package:my_flutter_website/texts.dart';
 
 
 Widget container_2 = Container(
-                width: 560,
-                height: 320,
+                // width: 560,
+                // height: 320,
                 decoration: ShapeDecoration(
                   color: Colors.lightBlue,
                   shape: RoundedRectangleBorder(
