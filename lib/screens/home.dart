@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_website/backend/quote.dart';
+import 'package:my_flutter_website/screens/responsive_widget.dart';
 import 'package:my_flutter_website/texts.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:my_flutter_website/widgets/leftPanel/leftPanel.dart';
+import 'package:my_flutter_website/widgets/mobile.dart';
 import 'package:my_flutter_website/widgets/upBar/upBar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:my_flutter_website/widgets/containers/Container_1.dart';
 import 'package:my_flutter_website/widgets/containers/Container_2.dart';
 import 'package:my_flutter_website/widgets/containers/Container_3.dart';
 import 'package:my_flutter_website/widgets/containers/Container_4.dart';
+import 'package:my_flutter_website/screens/responsive_widget.dart';
+import 'package:my_flutter_website/widgets/upBar/upBar_mobile.dart';
 
 
 class Home extends StatefulWidget {
@@ -19,10 +23,11 @@ class Home extends StatefulWidget {
 
 
 class _HomeState extends State<Home> {
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: upBar,   // <= górny panel
-      body: Row(          
+  Widget build(BuildContext context) {      
+    return ResponsiveWidget(
+      largeScreen: Scaffold(
+      appBar: ResponsiveWidget.isLargeScreen(context) ? upBar : upBar_mobile,   // <= górny panel
+      body: ResponsiveWidget.isLargeScreen(context) ? Row(          
           children: <Widget>[
           LeftPanel(), // <= cały leftPanel 
           Expanded(
@@ -70,6 +75,8 @@ class _HomeState extends State<Home> {
             ),
           ),
         ],
+      ) : LeftPanelMobile(),
+      
       ),
     );
   }
