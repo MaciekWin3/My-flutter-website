@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
           Expanded(
             flex: 1,
               child: Container(              
-              color: Colors.yellow[50],            
+              color: Colors.white,            
             ),
           ),
           Expanded(
@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
           Expanded(
             flex: 1,
               child: Container(              
-              color: Colors.yellow[50],            
+              color: Colors.white,            
             ),
           ),
           Expanded(
@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
           Expanded(
             flex: 1,
               child: Container(              
-              color: Colors.yellow[50],            
+              color: Colors.white,            
             ),
           ),
         ],
