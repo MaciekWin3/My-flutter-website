@@ -38,8 +38,9 @@ class _LeftPanelState extends State<LeftPanel> {
                 ),
                 Divider(              
                   height: 30.0,
+                  thickness: 1.5,
                 ),
-                Text(
+                SelectableText(
                 "About me",
                 style: TextStyle(
                   color: Colors.blue[500],
@@ -50,8 +51,9 @@ class _LeftPanelState extends State<LeftPanel> {
                 ),
                 Divider(              
                     height: 30.0,
+                    thickness: 1.5,
                   ),
-                Text(
+                SelectableText(
                   aboutMe,
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -60,8 +62,9 @@ class _LeftPanelState extends State<LeftPanel> {
                   ),
                 Divider(              
                   height: 30.0,
+                  thickness: 1.5,
                   ),
-                Text(
+                SelectableText(
                   "Contact",
                   style: TextStyle(
                     color: Colors.blue[500],
@@ -72,6 +75,7 @@ class _LeftPanelState extends State<LeftPanel> {
                   ),
                   Divider(              
                     height: 30.0,
+                    thickness: 1.5,
                   ),
                   Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -80,7 +84,7 @@ class _LeftPanelState extends State<LeftPanel> {
                         Icons.phone_android,                  
                       ),
                       SizedBox(width: 15.0),
-                      Text(
+                      SelectableText(
                         '+48 697220404',
                         style: TextStyle(
                           color: Colors.grey[700],
@@ -101,7 +105,7 @@ class _LeftPanelState extends State<LeftPanel> {
                         color: Colors.amber[500],
                       ),
                       SizedBox(width: 15.0),               
-                      Text(
+                      SelectableText(
                         'maciekwin3@gmail.com',
                         style: TextStyle(
                           color: Colors.grey[700],
@@ -120,7 +124,7 @@ class _LeftPanelState extends State<LeftPanel> {
                       Icon(AntDesign.github),
                       SizedBox(width: 15.0),
                       InkWell(
-                        child: Text(
+                        child: SelectableText(
                           'https://github.com/MaciekWin3',
                         style: TextStyle(
                           color: Colors.blue[700],
@@ -138,9 +142,9 @@ class _LeftPanelState extends State<LeftPanel> {
                   ),
                   Divider(              
                     height: 30.0,
-                    color: Colors.grey[350],
+                    thickness: 1.5,
                   ),
-                  Text(
+                  SelectableText(
                   "      Bitcoin \n exchange rate",
                   style: TextStyle(
                     color: Colors.blue[500],
@@ -150,7 +154,8 @@ class _LeftPanelState extends State<LeftPanel> {
                     ),
                   ),
                   Divider(              
-                    height: 32.0,             
+                    height: 30.0,
+                    thickness: 1.5,             
                   ),
                   Row(
                     children: <Widget>[

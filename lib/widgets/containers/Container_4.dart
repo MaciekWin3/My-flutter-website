@@ -28,7 +28,7 @@ Widget container_4 = Container(
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[                      
-                      Text(
+                      SelectableText(
                         'Job expirience',
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -41,7 +41,7 @@ Widget container_4 = Container(
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      SelectableText(
                         jobs,
                         textAlign: TextAlign.center,
                         style: TextStyle(

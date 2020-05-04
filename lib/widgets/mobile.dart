@@ -43,7 +43,7 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                  Divider(              
                     height: 30.0,
                   ),
-                Text(
+                SelectableText(
                   "About me",
                   style: TextStyle(
                     color: Colors.blue[500],
@@ -54,8 +54,9 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                   ),
                 Divider(              
                     height: 30.0,
+                    thickness: 1.5,
                   ),
-                Text(
+                SelectableText(
                   aboutMe,
                   textAlign: TextAlign.center,
                   style: TextStyle(                   
@@ -63,8 +64,9 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                   ),
                 Divider(              
                   height: 30.0,
+                  thickness: 1.5,
                   ),
-                Text(
+                SelectableText(
                   "Contact",
                   style: TextStyle(
                     color: Colors.blue[500],
@@ -75,16 +77,15 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                   ),
                 Divider(              
                   height: 30.0,
+                  thickness: 1.5,
                 ),
-                  Row(
-                    
-                    children: <Widget>[
-                      
+                  Row(                   
+                    children: <Widget>[                     
                       Icon(
                         Icons.phone_android,                  
                       ),
                       SizedBox(width: 15.0),
-                      Text(
+                      SelectableText(
                         '+48 697220404',
                         style: TextStyle(
                           color: Colors.grey[700],
@@ -97,15 +98,14 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                   SizedBox(
                     height: 5,
                   ),  
-                  Row(
-                    
+                  Row(                    
                     children: <Widget>[
                       Icon(
                         Icons.email,
                         color: Colors.amber[500],
                       ),
                       SizedBox(width: 15.0),               
-                      Text(
+                      SelectableText(
                         'maciekwin3@gmail.com',
                         style: TextStyle(
                           color: Colors.grey[700],
@@ -118,14 +118,12 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                   SizedBox(
                     height: 5,
                   ),
-                  Row(
-                    
-                  
+                  Row(                  
                     children: <Widget>[
                       Icon(AntDesign.github),
                       SizedBox(width: 15.0),
                       InkWell(
-                        child: Text(
+                        child: SelectableText(
                           'https://github.com/MaciekWin3',
                         style: TextStyle(
                           color: Colors.blue[700],
