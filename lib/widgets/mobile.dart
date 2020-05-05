@@ -123,7 +123,7 @@ class _LeftPanelStateMobile extends State<LeftPanelMobile> {
                       Icon(AntDesign.github),
                       SizedBox(width: 15.0),
                       InkWell(
-                        child: SelectableText(
+                        child: Text(
                           'https://github.com/MaciekWin3',
                         style: TextStyle(
                           color: Colors.blue[700],
