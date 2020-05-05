@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:my_flutter_website/backend/btc.dart';
 
 
+
 class LeftPanel extends StatefulWidget {
   @override
   _LeftPanelState createState() => _LeftPanelState();
@@ -84,12 +85,15 @@ class _LeftPanelState extends State<LeftPanel> {
                         Icons.phone_android,                  
                       ),
                       SizedBox(width: 15.0),
-                      SelectableText(
-                        '+48 697220404',
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 14.0,
-                          letterSpacing: 1.0,
+                      Tooltip(
+                        message: 'My phone number',
+                          child: SelectableText(
+                          '+48 697220404',
+                          style: TextStyle(
+                            color: Colors.grey[700],
+                            fontSize: 14.0,
+                            letterSpacing: 1.0,
+                          ),
                         ),
                       ),
                     ],
@@ -105,14 +109,17 @@ class _LeftPanelState extends State<LeftPanel> {
                         color: Colors.amber[500],
                       ),
                       SizedBox(width: 15.0),               
-                      SelectableText(
-                        'maciekwin3@gmail.com',
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 14.0,
-                          letterSpacing: 1.0,
+                      Tooltip(
+                        message: 'My e-mail',
+                          child: SelectableText(
+                          'maciekwin3@gmail.com',
+                          style: TextStyle(
+                            color: Colors.grey[700],
+                            fontSize: 14.0,
+                            letterSpacing: 1.0,
+                          ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   SizedBox(

@@ -29,7 +29,7 @@ Widget container_4 = Container(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[                      
                       SelectableText(
-                        'Job expirience',
+                        'Job experience',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
